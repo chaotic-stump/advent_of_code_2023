@@ -1,11 +1,19 @@
+# Test data
 # races = <<RACES
 #   Time:      7  15   30
 #   Distance:  9  40  200
 # RACES
 
+# Part 1
+# races = <<RACES
+#   Time:        59     68     82     74
+#   Distance:   543   1020   1664   1022
+# RACES
+
+# Part 2
 races = <<RACES
-  Time:        59     68     82     74
-  Distance:   543   1020   1664   1022
+Time:      71530
+Distance:  940200
 RACES
 
 # breaking down the input
@@ -27,24 +35,26 @@ time_arr.each_with_index do |num, t_ind|
   win_counter = 0
   race_arr.each_with_index do |n, r_ind|
     lap_distance = (race_arr.size - (r_ind + 1)) * n
-    lap_distance.to_i.is_a?(Integer)
-    if lap_distance > distance_arr[t_ind].to_i
+    lap_distance.to_i
+    if lap_distance.to_i > distance_arr[t_ind].to_i
       results.push(lap_distance)
       win_counter += 1
     end
 
     
     if r_ind + 1 == race_arr.size
-      wins.push(win_counter.to_i)
+      wins.push(win_counter)
     end
 
     lap_distance = 0
   end
-  puts wins.map { |n| n *= n}
+  p wins.inspect
 end
 
+puts 4 * 8 * 9
+puts 36 * 23 * 9 * 37
 # puts 32 * 9
-puts 1296 * 529 * 81 * 1369 * 288
+# puts 1296 * 529 * 81 * 1369 * 288
 
 # first_race = {
 #   0 => 0, 
