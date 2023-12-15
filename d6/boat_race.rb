@@ -10,10 +10,16 @@
 #   Distance:   543   1020   1664   1022
 # RACES
 
-# Part 2
+# Part 2 test
+# races = <<RACES
+# Time:      71530
+# Distance:  940200
+# RACES
+
+# part 2
 races = <<RACES
-Time:      71530
-Distance:  940200
+  Time:        59688274
+  Distance:   543102016641022
 RACES
 
 # breaking down the input
