@@ -7,6 +7,9 @@ games = <<GAMES
   Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
 GAMES
 
+# Loops: games, rounds, match, number, color
+# Result loop: match, number, color``
+
 # ["12 red", "13 green", "14 blue"]
 
 # if a round (not game, remember the ;) has more than any expected color, skip to the next game. Otherwise, put the game id in the following array.
